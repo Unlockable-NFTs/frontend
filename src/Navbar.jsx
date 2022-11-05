@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState, React} from 'react'
 import styled from 'styled-components'
 import { BiHome } from 'react-icons/bi'
 import { FiUser } from 'react-icons/fi'
@@ -6,6 +6,19 @@ import { BsChatRightText } from 'react-icons/bs'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import Fade from 'react-reveal/Fade';
 const Navbar = () => {
+
+    async function connectWallet() {
+        if (typeof window.ethereum !== 'undefined') {
+            // console.log(window.ethereum)
+            console.log('MetaMask is installed!');
+            const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+            const account = accounts[0];
+            console.log(account)
+            
+        } else {
+            alert("Please Install Metamask!!");
+        }
+    }
 
     return (
         <Container>
@@ -28,7 +41,7 @@ const Navbar = () => {
                     <li><a href="#"><BsChatRightText /></a></li>
                 </Middle>
                 <Right>
-                    <button id="wallet-connect">Connect Wallet</button>
+                    <button onClick={connectWallet} id="wallet-connect">Connect Wallet</button>
                 </Right>
             </Nav>
         </Container>
