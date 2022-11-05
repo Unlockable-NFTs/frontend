@@ -4,7 +4,7 @@ import {BsChevronDown} from 'react-icons/bs'
 const Explore = () => {
   return (
     <Component>
-        <h3>Explore More</h3>
+        <h3>Explore NFTs</h3>
         <BsChevronDown/>
     </Component>
   )
@@ -23,7 +23,7 @@ animation: animateDown infinite 1.5s;
 h3{
     color:white;
     font-family: 'Poppins', sans-serif;
-    font-size:26px;
+    font-size:20px;
 }
 svg{
     color:white;

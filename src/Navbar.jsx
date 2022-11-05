@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import { BiHome } from 'react-icons/bi'
 import { FiUser } from 'react-icons/fi'
 import { BsChatRightText } from 'react-icons/bs'
-import { BsCashCoin } from 'react-icons/bs'
+import { AiOutlineInfoCircle } from 'react-icons/ai'
 import Fade from 'react-reveal/Fade';
 const Navbar = () => {
+
     return (
         <Container>
             <Box>
@@ -22,12 +23,12 @@ const Navbar = () => {
                 </Text>
                 <Middle>
                     <li><a href="#"><BiHome /></a></li>
+                    <li><a href="#"><AiOutlineInfoCircle /></a></li>
                     <li><a href="#"><FiUser /></a></li>
-                    <li><a href="#"><BsCashCoin /></a></li>
                     <li><a href="#"><BsChatRightText /></a></li>
                 </Middle>
                 <Right>
-                    <button>Connect Wallet</button>
+                    <button id="wallet-connect">Connect Wallet</button>
                 </Right>
             </Nav>
         </Container>
@@ -41,7 +42,7 @@ top: 0;
 left: 0;
 right: 0;
 background: #00000061;
-height: 32.5vw;
+height: 36vw;
 `
 const Text = styled.div`
   color:white;
@@ -52,7 +53,7 @@ const Text = styled.div`
   gap:0.5rem;
   h1{
     font-family: 'Poppins', sans-serif;
-    font-size:30px;
+    font-size:40px;
     font-weight:600;
   }
   P{
@@ -72,11 +73,15 @@ display:flex;
 justify-content:center;
 z-index: 999;
 align-items:center;
-    padding: 17px 40px;
+    padding: 17px 0;
+    width:18%;
     gap: 2rem;
     background:red;
     border-radius:20px;
+   background: #5d476980;;
+    border-radius: 20px;
     bottom: 2rem;
+    backdrop-filter: blur(10px);
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
@@ -93,7 +98,7 @@ li a{
 
 const Container = styled.div`
 width: 100%;
-height:500px;
+height:552px;
 background:url('./images/banner.jpg');
 background-position: center;
 background-size: cover;

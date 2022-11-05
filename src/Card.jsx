@@ -30,7 +30,7 @@ button{
   cursor:pointer;
   font-size:23px;
   background:#8080805c;
-  border-radius:3px;  
+  border-radius:3px;
   transform: translateY(-4rem);
   visibility: hidden;
   opacity:0;
@@ -40,7 +40,7 @@ button{
   }
   :hover{
       svg{
-        color:#0202029c;
+        color:#359c9edb;
       }
   }
 }
